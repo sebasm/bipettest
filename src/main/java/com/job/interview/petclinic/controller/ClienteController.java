@@ -1,9 +1,6 @@
 package com.job.interview.petclinic.controller;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
@@ -16,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.job.interview.petclinic.dto.ClienteDTO;
-import com.job.interview.petclinic.entity.Cliente;
 import com.job.interview.petclinic.exceptions.NotExistException;
 import com.job.interview.petclinic.service.ClienteService;
 

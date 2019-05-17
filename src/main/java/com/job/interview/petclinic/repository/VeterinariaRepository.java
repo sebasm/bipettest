@@ -12,5 +12,7 @@ public interface VeterinariaRepository extends CrudRepository<Veterinaria, Long>
 	
 	Page<Veterinaria> findAll(Pageable page);
 	
+	Page<Veterinaria> findByNombre(Pageable page, String nombre);
+	
 
 }

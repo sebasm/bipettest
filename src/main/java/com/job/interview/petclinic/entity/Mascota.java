@@ -2,6 +2,7 @@ package com.job.interview.petclinic.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Getter;
@@ -21,14 +22,10 @@ public class Mascota {
 	}
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "cliente", nullable = false)
-//	private Cliente cliente;
-
 	
 
 }

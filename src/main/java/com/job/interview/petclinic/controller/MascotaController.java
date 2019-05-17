@@ -28,16 +28,16 @@ public class MascotaController {
 		mascotaService.saveMascota(mascota);
 	}
 	
-//	@RequestMapping(value="", method = RequestMethod.GET)
-//	public Object clientes(
-//			@PageableDefault(page = 0, size = 50) Pageable page,
-//			@RequestParam(required = false) Long clientId,
-//			@RequestParam(required = false) String nombre) {
-//		if(clientId != null) {
-//			return mascotaService.getByClient(clientId);
-//		}else {
-//			return mascotaService.getMascotas(page, nombre);
-//		}
-//	}
+	@RequestMapping(value="", method = RequestMethod.GET)
+	public Object mascotas(
+			@PageableDefault(page = 0, size = 50) Pageable page,
+			@RequestParam(required = false) Long clientId,
+			@RequestParam(required = false) String nombre) {
+		if(clientId != null) {
+			return mascotaService.getByClient(clientId);
+		}else {
+			return mascotaService.getMascotas(page, nombre);
+		}
+	}
 
 }

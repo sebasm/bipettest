@@ -15,8 +15,13 @@ public class VeterinariaService {
 	@Autowired
 	VeterinariaRepository vetRepo;
 	
-	public Page<Veterinaria> getVeterinarias(Pageable page){
-		return vetRepo.findAll(page);
+	public Page<Veterinaria> getVeterinarias(Pageable page, String nombre){
+		if(nombre == null) {
+			return vetRepo.findAll(page);
+		} else {
+			return vetRepo.findByNombre(page, nombre);
+		}
+		
 	}
 	
 	public Veterinaria getById(Long id) {
